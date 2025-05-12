@@ -1,10 +1,9 @@
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
-
 const app = express();
+app.use(cors({ origin: 'https://www.cpb-uglsolution.com/' }));  // Replace with your frontend URL
 const PORT = 4000;
-app.use(cors());
 app.use(express.json());
 
 const VISITOR_FILE = 'visitors.json';
