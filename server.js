@@ -2,7 +2,10 @@ const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
 const app = express();
-app.use(cors({ origin: 'https://www.cpb-uglsolution.com/' }));  // Replace with your frontend URL
+
+// Allow requests from your frontend domain hosted on AWS Amplify
+app.use(cors({ origin: 'https://www.cpb-uglsolution.com' }));  // Updated with your frontend domain
+
 const PORT = 4000;
 app.use(express.json());
 
