@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/track-visitor",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/get-visitors",
+      "dest": "/server.js"
+    }
+  ]
+}
